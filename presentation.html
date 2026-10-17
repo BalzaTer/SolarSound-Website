@@ -84,7 +84,7 @@
         <section class="section">
             <h2 class="section-title">Aperçu des Fonctionnalités</h2>
             <div class="features-grid">
-                <div class="feature-card fade-on-scroll" data-delay="0.1s">
+                <div class="feature-card fade-on-scroll" data-video="4GMd7ZSnKA0" role="button" data-delay="0.1s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/parametres.svg" alt="Paramètres">
                     </div>
@@ -92,7 +92,7 @@
                     <p class="feature-description">Changer les couleurs, les polices, et disposez l'interface selon vos préférences.</p>
                 </div>
                 
-                <div class="feature-card fade-on-scroll" data-delay="0.3s">
+                <div class="feature-card fade-on-scroll" data-video="fAmDU8Mh6ec" role="button" data-delay="0.3s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/demarrage.svg" alt="Performances">
                     </div>
@@ -100,7 +100,7 @@
                     <p class="feature-description">Lecture fluide même avec de grandes playlists et des fichiers haute résolution.</p>
                 </div>
 
-                <div class="feature-card fade-on-scroll" data-delay="0.4s">
+                <div class="feature-card fade-on-scroll" data-video="J-LnGzp1rec" role="button" data-delay="0.4s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/egaliseur.svg" alt="Égaliseur">
                     </div>
@@ -110,7 +110,7 @@
                     </p>
                 </div>
                 
-                <div class="feature-card fade-on-scroll" data-delay="0.5s">
+                <div class="feature-card fade-on-scroll" data-video="6lsUX5rRBP4" role="button" data-delay="0.5s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/playlist.svg" alt="Playlist">
                     </div>
@@ -120,7 +120,7 @@
                     </p>
                 </div>
                 
-                <div class="feature-card fade-on-scroll" data-delay="0.6s">
+                <div class="feature-card fade-on-scroll" data-video="lHUqp6TToZ4" role="button" data-delay="0.6s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/rotation.svg" alt="Rotation">
                     </div>
@@ -130,7 +130,7 @@
                     </p>
                 </div>
 
-                <div class="feature-card fade-on-scroll" data-delay="0.7s">
+                <div class="feature-card fade-on-scroll" data-video="3jDIafSLBcs" role="button" data-delay="0.7s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/chill.svg" alt="Humeurs">
                     </div>
@@ -140,7 +140,7 @@
                     </p>
                 </div>
                 
-                <div class="feature-card fade-on-scroll" data-delay="0.8s">
+                <div class="feature-card fade-on-scroll" data-video="kUweWpw4_Zk" role="button" data-delay="0.8s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/heart.svg" alt="Favoris">
                     </div>
@@ -150,7 +150,7 @@
                     </p>
                 </div>
                 
-                <div class="feature-card fade-on-scroll" data-delay="0.9s">
+                <div class="feature-card fade-on-scroll" data-video="UmeZFP2THO0" role="button" data-delay="0.9s">
                     <div class="feature-icon">
                         <img src="assets/images/icons/video.svg" alt="Vidéo">
                     </div>
@@ -207,6 +207,18 @@
             </p>
         </div>
     </footer>
+
+    <div id="video-overlay" class="video-overlay" role="dialog" aria-modal="true" aria-label="Démonstration vidéo" aria-hidden="true">
+        <div class="video-modal">
+            <button id="video-close" class="video-close" type="button" aria-label="Fermer la vidéo">×</button>
+            <div class="video-frame">
+                <iframe id="video-player"
+                        title="Démonstration SolarSound"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/releases.js"></script>
     <script src="assets/js/main.js"></script>

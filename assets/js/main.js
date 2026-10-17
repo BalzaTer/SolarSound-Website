@@ -706,6 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.navigation = new Navigation();
     window.changelogAccordion = new ChangelogAccordion();
     window.screenshotGallery = new ScreenshotGallery();
+    window.videoModal = new VideoModal();
     
     console.log('Site SolarSound initialisé');
 });
@@ -727,3 +728,68 @@ function formatFileSize(bytes) {
 // Make functions globally available
 window.formatDate = formatDate;
 window.formatFileSize = formatFileSize;
+
+// ============================================
+// Video Modal
+// ============================================
+class VideoModal {
+    constructor() {
+        this.cards = document.querySelectorAll('.feature-card[data-video]');
+        this.overlay = document.getElementById('video-overlay');
+        this.player = document.getElementById('video-player');
+        this.closeButton = document.getElementById('video-close');
+        this.previousFocus = null;
+
+        if (this.cards.length === 0) return;
+        if (!this.overlay || !this.player || !this.closeButton) {
+            console.error('La fenêtre de démonstration YouTube est absente ou incomplète.');
+            return;
+        }
+        this.bindEvents();
+    }
+
+    bindEvents() {
+        this.cards.forEach(card => {
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Voir la vidéo : ${card.querySelector('.feature-title')?.textContent ?? 'démonstration'}`);
+
+            card.addEventListener('click', () => this.open(card.dataset.video));
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.open(card.dataset.video);
+                }
+            });
+        });
+
+        this.closeButton.addEventListener('click', () => this.close());
+        this.overlay.addEventListener('click', (e) => {
+            if (e.target === this.overlay) this.close();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.overlay.classList.contains('active')) this.close();
+        });
+    }
+
+    open(videoId) {
+        if (!/^[\w-]{11}$/.test(videoId)) {
+            console.error('Identifiant de vidéo YouTube invalide :', videoId);
+            return;
+        }
+
+        this.previousFocus = document.activeElement;
+        this.player.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        this.overlay.classList.add('active');
+        this.overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+        this.closeButton.focus();
+    }
+
+    close() {
+        this.overlay.classList.remove('active');
+        this.overlay.setAttribute('aria-hidden', 'true');
+        this.player.src = '';
+        document.body.classList.remove('lightbox-open');
+        if (this.previousFocus instanceof HTMLElement) this.previousFocus.focus();
+    }
+}
