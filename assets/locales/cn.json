@@ -1,0 +1,175 @@
+{
+  "site": {
+    "title": "SolarSound - 5.1 音频和视频播放器",
+    "description": "SolarSound 是一款先进的音频和视频播放器，完整支持 5.1 环绕声，并为音乐爱好者提供众多功能。",
+    "keywords": "音频播放器, 视频播放器, 5.1 环绕声, 音乐, 均衡器, 播放列表"
+  },
+  "nav": {
+    "home": "首页",
+    "download": "下载",
+    "presentation": "介绍",
+    "contact": "联系"
+  },
+  "hero": {
+    "title": "SolarSound",
+    "subtitle": "终极 5.1 音频和视频播放器",
+    "description": "以卓越的品质收听您的音乐并观看视频，完全控制您的音频体验。",
+    "ctaDownload": "立即下载",
+    "ctaLearn": "了解更多"
+  },
+  "features": {
+    "title": "主要功能",
+    "subtitle": "为完美音频体验提供所需的一切",
+    "audio": {
+      "title": "高级音频播放",
+      "description": "支持多种音频格式 (WAV, MP3 等)，配有频谱可视化和高级播放管理。"
+    },
+    "video": {
+      "title": "视频播放",
+      "description": "播放 MP4, MKV, AVI, MOV, WMV 等格式的视频，支持可变速度和字幕。"
+    },
+    "surround": {
+      "title": "5.1 环绕声",
+      "description": "精确调节每个扬声器，单声道混音到低音炮，以及沉浸式音频效果。"
+    },
+    "equalizer": {
+      "title": "可自定义均衡器",
+      "description": "8 段均衡器，自定义预设，自由模式创建自己的声音曲线。"
+    },
+    "playlist": {
+      "title": "播放列表管理",
+      "description": "创建、组织和管理播放列表，支持全局搜索和自动索引。"
+    },
+    "rotation": {
+      "title": "旋转效果",
+      "description": "用独特的效果让声音在您周围旋转，获得沉浸式体验。"
+    },
+    "moods": {
+      "title": "心情",
+      "description": "选择与您的播放列表相关的心情，更快地启动符合时刻的音乐"
+    },
+    "favorites": {
+      "title": "收藏",
+      "description": "标记您最喜欢的曲目，并从主标签中更快地启动它们"
+    },
+    "settings": {
+      "title": "大量设置",
+      "description": "从字体到配色方案，到电脑启动时自动播放音乐。您完全掌控！"
+    }
+  },
+  "download": {
+    "title": "下载 SolarSound",
+    "subtitle": "Windows 可用 - 便携版或安装程序",
+    "latest": "最新版本",
+    "oldReleases": "之前的版本",
+    "seeChanges": "查看更改",
+    "standalone": "便携版 (EXE)",
+    "installer": "安装程序",
+    "note": "安装程序提供音频/视频文件与 SolarSound 的关联。"
+  },
+  "presentation": {
+    "title": "SolarSound 介绍",
+    "subtitle": "发现为什么 SolarSound 是PC上最好的音乐播放器之一",
+    "intro": "SolarSound 的创建是为了满足个人需求：以精确的调节选项收听5.1环绕声音乐。在现有软件（如VLC）中没有找到满意的解决方案后，我决定创建自己的播放器。今天这个项目已经发展到更大的规模，也提供创新的音乐播放器功能，如果您从CD或mp3（或显然WAV，对于纯粹主义者）收听音乐。",
+    "story": {
+      "title": "我的故事",
+      "content": "我热爱音乐、工程技术，并且经常使用计算机。这个项目始于一个简单的个人实验。如今，它已成为一个功能完整的媒体播放器，具备音频和视频播放的高级功能。所有内容均使用Python开发，部分功能得到AI的帮助，但始终注重细节和质量。"
+    },
+    "technology": {
+      "title": "使用的技术",
+      "content": "SolarSound 使用 PyQt6 作为其图形界面，并使用 sounddevice、soundfile 和 mutagen 等专用音频库进行多媒体文件管理。界面完全可自定义，配有颜色主题和可调整的字体。"
+    },
+    "future": {
+      "title": "项目未来",
+      "content": "我不断致力于新功能的开发：支持更多格式、改进音频效果、更直观的界面以及跨平台支持。欢迎您的反馈来指导开发方向。"
+    },
+    "featuresOverview": "功能概述",
+    "screenshots": "截图",
+    "screenshotTitles": {
+      "banner": "应用横幅",
+      "startup": "启动屏幕",
+      "colors": "颜色自定义"
+    },
+    "featureCards": {
+      "customizable": {
+        "title": "可自定义界面",
+        "description": "更改颜色、字体，并根据您的偏好排列界面。"
+      },
+      "multilingual": {
+        "title": "多语言",
+        "description": "界面提供法语、英语、德语、西班牙语、意大利语、中文、俄语等多种语言。"
+      },
+      "performance": {
+        "title": "优化性能",
+        "description": "即使使用大型播放列表和高分辨率文件也能流畅播放。"
+      },
+      "videoPlayer": {
+        "title": "视频播放器",
+        "description": "使用此集成播放器观看视频或甚至电影，它显然支持环绕声媒体"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "有问题、建议或需要帮助吗？",
+    "formTitle": "发送消息",
+    "name": "姓名",
+    "email": "邮箱地址",
+    "subject": "主题",
+    "message": "您的消息",
+    "send": "发送消息",
+    "sending": "发送中...",
+    "success": "消息已发送！请查看您的邮件客户端。",
+    "error": "发生错误。请重试。",
+    "note": "我们会尽快回复。"
+  },
+  "footer": {
+    "description": "SolarSound 是一个开源项目，致力于提供最佳的音频和视频播放体验。",
+    "links": "快速链接",
+    "github": "GitHub",
+    "license": "许可证",
+    "privacy": "隐私政策",
+    "copyright": "© 2026 SolarSound. 版权所有。"
+  },
+  "changelog": {
+    "5.1.0": {
+      "title": "SolarSound 5.1.0",
+      "description": "最新版本，改进了5.1环绕声支持并添加新功能",
+      "changes": [
+        "完整5.1环绕声支持，可精确调节每个扬声器",
+        "改进音频旋转效果，新的可视化界面",
+        "新黑胶模拟模式，高级设置",
+        "改进播放列表管理，即时全局搜索",
+        "修复重大bug并改进性能",
+        "全新更直观的用户界面",
+        "支持新的音频和视频格式"
+      ]
+    },
+    "5.0.0": {
+      "title": "SolarSound 5.0.0",
+      "description": "重大更新，添加视频播放支持",
+      "changes": [
+        "添加MP4, MKV, AVI, MOV, WMV视频播放",
+        "可变播放速度0.25x到10x",
+        "精确逐帧导航",
+        "完整支持SRT和ASS字幕",
+        "可分离视频窗口，更灵活",
+        "改进全屏模式",
+        "集成混合播放列表（音频+视频）"
+      ]
+    },
+    "4.5.0": {
+      "title": "SolarSound 4.5.0",
+      "description": "改进音频功能和界面增强",
+      "changes": [
+        "改进均衡器，8段带和自定义预设",
+        "沉浸式3D音频旋转效果",
+        "超快播放列表搜索",
+        "8个新的自定义配色主题",
+        "大型库的性能优化",
+        "新元数据管理系统",
+        "CD播放列表支持，自动识别"
+      ]
+    }
+  }
+}

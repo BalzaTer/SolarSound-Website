@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr" data-i18n-data>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez l'équipe de SolarSound" data-i18n="site.description">
+    <meta name="keywords" content="contact, SolarSound, support, aide" data-i18n="site.keywords">
+    <title data-i18n="contact.title">Contactez-Nous</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="SolarSound Logo">
+            </div>
+            <span class="app-title" data-i18n="hero.title">SolarSound</span>
+        </a>
+        
+        <nav class="nav-main">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+            <a href="download.html" class="nav-link" data-i18n="nav.download">Téléchargement</a>
+            <a href="presentation.html" class="nav-link" data-i18n="nav.presentation">Présentation</a>
+            <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+        </nav>
+        
+        <div class="lang-selector">
+            <button>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span class="lang-name">Français</span>
+            </button>
+            <div class="lang-dropdown">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+                <div class="lang-option" data-lang="de">Deutsch</div>
+                <div class="lang-option" data-lang="es">Español</div>
+                <div class="lang-option" data-lang="it">Italiano</div>
+                <div class="lang-option" data-lang="cn">中文</div>
+                <div class="lang-option" data-lang="ru">Русский</div>
+            </div>
+        </div>
+        
+        <button class="menu-toggle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="card fade-on-scroll">
+                <h1 class="card-title" data-i18n="contact.title">Contactez-Nous</h1>
+                <p class="section-subtitle" data-i18n="contact.subtitle">
+                    Des questions, des suggestions ou besoin d'aide ?
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl);" data-i18n="contact.note">
+                    Nous vous répondrons dans les plus brefs délais.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section">
+            <div class="contact-form-container">
+                <div class="card fade-on-scroll">
+                    <h2 class="card-title" data-i18n="contact.formTitle">Envoyez-nous un message</h2>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="contact.name">Nom</label>
+                            <input type="text" 
+                                   name="name" 
+                                   class="form-input" 
+                                   required
+                                   data-i18n-placeholder="contact.name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="contact.email">Adresse Email</label>
+                            <input type="email" 
+                                   name="email" 
+                                   class="form-input" 
+                                   required
+                                   data-i18n-placeholder="contact.email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="contact.subject">Sujet</label>
+                            <input type="text" 
+                                   name="subject" 
+                                   class="form-input" 
+                                   required
+                                   data-i18n-placeholder="contact.subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="contact.message">Votre Message</label>
+                            <textarea name="message" 
+                                      class="form-textarea" 
+                                      required
+                                      data-i18n-placeholder="contact.message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                            <span data-i18n="contact.send">Envoyer le Message</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Alternative Contact Methods -->
+                <div class="card fade-on-scroll" data-delay="0.1s">
+                    <h2 class="card-title">Autres Moyens de Contact</h2>
+                    <p style="color: var(--text-secondary);">
+                        Vous pouvez également nous contacter directement par email :
+                    </p>
+                    <div style="margin-top: var(--spacing-md);">
+                        <a href="mailto:dev.hcstudio@gmail.com" 
+                           class="btn btn-secondary" 
+                           style="display: inline-flex; align-items: center; gap: var(--spacing-sm);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            dev.hcstudio@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="features-grid">
+                <div class="card fade-on-scroll">
+                    <h3>Comment installer SolarSound ?</h3>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-sm);">
+                        Téléchargez simplement le fichier portable ou l'installateur depuis notre page de téléchargement. Aucune configuration complexe n'est nécessaire.
+                    </p>
+                </div>
+                
+                <div class="card fade-on-scroll" data-delay="0.1s">
+                    <h3>Quels formats sont supportés ?</h3>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-sm);">
+                        SolarSound supporte de nombreux formats audio (WAV, MP3, FLAC, etc.) et vidéo (MP4, MKV, AVI, etc.). Consultez notre page de présentation pour la liste complète.
+                    </p>
+                </div>
+                
+                <div class="card fade-on-scroll" data-delay="0.2s">
+                    <h3>SolarSound est-il gratuit ?</h3>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-sm);">
+                        Oui, SolarSound est un logiciel gratuit et open source. Vous pouvez l'utiliser, le modifier et le distribuer librement selon les termes de la licence.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text" data-i18n="footer.description">
+                SolarSound est un projet open source dédié à fournir la meilleure expérience de lecture audio et vidéo.
+            </p>
+            <div class="footer-links">
+                <span data-i18n="footer.links">Liens rapides:</span>
+                <a href="https://github.com/BalzaTer/SolarSound" class="footer-link" target="_blank">GitHub</a>
+                <a href="https://github.com/BalzaTer/SolarSound?tab=MIT-1-ov-file" class="footer-link" target="_blank" data-i18n="footer.license">Licence</a>
+            </div>
+            <p class="footer-text" data-i18n="footer.copyright">
+                © 2026 SolarSound. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/releases.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

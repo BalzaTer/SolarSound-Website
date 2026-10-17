@@ -1,0 +1,175 @@
+{
+  "site": {
+    "title": "SolarSound - 5.1 Audio & Video Player",
+    "description": "SolarSound is an advanced audio and video player with full 5.1 surround sound support and many features for music lovers.",
+    "keywords": "audio player, video player, 5.1 surround, music, equalizer, playlist"
+  },
+  "nav": {
+    "home": "Home",
+    "download": "Download",
+    "presentation": "Presentation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "SolarSound",
+    "subtitle": "Ultimate 5.1 Audio & Video Player",
+    "description": "Listen to your music and watch your videos with exceptional quality and full control over your audio experience.",
+    "ctaDownload": "Download Now",
+    "ctaLearn": "Learn More"
+  },
+  "features": {
+    "title": "Key Features",
+    "subtitle": "Everything you need for the perfect audio experience",
+    "audio": {
+      "title": "Advanced Audio Playback",
+      "description": "Support for many audio formats (WAV, MP3, etc.) with spectral visualization and advanced playback management."
+    },
+    "video": {
+      "title": "Video Playback",
+      "description": "Play videos in MP4, MKV, AVI, MOV, WMV and more, with variable speed and subtitles."
+    },
+    "surround": {
+      "title": "5.1 Surround Sound",
+      "description": "Precise adjustment of each speaker, mono mixing to subwoofer, and immersive audio effects."
+    },
+    "equalizer": {
+      "title": "Customizable Equalizer",
+      "description": "8-band equalizer, custom presets, and free mode to create your own sound curve."
+    },
+    "playlist": {
+      "title": "Playlist Management",
+      "description": "Create, organize, and manage your playlists with global search and automatic indexing."
+    },
+    "rotation": {
+      "title": "Rotation Effects",
+      "description": "Rotate sound around you with unique effects for an immersive experience."
+    },
+    "moods": {
+      "title": "Moods",
+      "description": "Choose moods associated with your playlists and launch music that matches the moment faster"
+    },
+    "favorites": {
+      "title": "Favorites",
+      "description": "Mark your favorite tracks and launch them faster from the main tab"
+    },
+    "settings": {
+      "title": "Tons of Settings",
+      "description": "From fonts to color themes to auto-start with your music when the computer boots. You control everything!"
+    }
+  },
+  "download": {
+    "title": "Download SolarSound",
+    "subtitle": "Available for Windows - Portable version or installer",
+    "latest": "Latest Version",
+    "oldReleases": "Previous Versions",
+    "seeChanges": "See changes",
+    "standalone": "Portable Version (EXE)",
+    "installer": "Installer",
+    "note": "The installer offers file association for audio/video files with SolarSound."
+  },
+  "presentation": {
+    "title": "SolarSound Presentation",
+    "subtitle": "Discover why SolarSound is one of the best music players on PC",
+    "intro": "SolarSound was created to meet a personal need: listening to music in 5.1 surround sound with precise adjustment options. Not finding a satisfactory solution in existing software like VLC, I decided to create my own player. Today this project has taken on a much larger dimension, also offering itself as an innovative music player if you listen to music from discs or mp3 (or WAV obviously for purists)",
+    "story": {
+      "title": "My Story",
+      "content": "I am passionate about music, engineering and use computers a lot. This project started as a simple personal experiment. Today, it has become a complete media player with advanced features for audio and video playback. Everything is developed in Python, with the help of AI, but always with attention to detail and quality."
+    },
+    "technology": {
+      "title": "Technologies Used",
+      "content": "SolarSound uses PyQt6 for its graphical interface, with specialized audio libraries such as sounddevice, soundfile, and mutagen for multimedia file management. The interface is fully customizable with color themes and adaptable fonts."
+    },
+    "future": {
+      "title": "Project Future",
+      "content": "I am constantly working on new features: support for more formats, improved audio effects, more intuitive interface, and cross-platform support. Your feedback is welcome to guide development."
+    },
+    "featuresOverview": "Feature Overview",
+    "screenshots": "Screenshots",
+    "screenshotTitles": {
+      "banner": "Application Banner",
+      "startup": "Startup Screen",
+      "colors": "Color Customization"
+    },
+    "featureCards": {
+      "customizable": {
+        "title": "Customizable Interface",
+        "description": "Change colors, fonts, and arrange the interface according to your preferences."
+      },
+      "multilingual": {
+        "title": "Multilingual",
+        "description": "Interface available in French, English, German, Spanish, Italian, Chinese, Russian and more."
+      },
+      "performance": {
+        "title": "Optimized Performance",
+        "description": "Smooth playback even with large playlists and high-resolution files."
+      },
+      "videoPlayer": {
+        "title": "Video Player",
+        "description": "Watch videos or even movies with this integrated player, it supports media with surround sound obviously"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Questions, suggestions, or need help?",
+    "formTitle": "Send us a message",
+    "name": "Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! Please check your email client.",
+    "error": "An error occurred. Please try again.",
+    "note": "We will respond as soon as possible."
+  },
+  "footer": {
+    "description": "SolarSound is an open source project dedicated to providing the best audio and video playback experience.",
+    "links": "Quick Links",
+    "github": "GitHub",
+    "license": "License",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 SolarSound. All rights reserved."
+  },
+  "changelog": {
+    "5.1.0": {
+      "title": "SolarSound 5.1.0",
+      "description": "Latest version with improved 5.1 surround sound support and new features",
+      "changes": [
+        "Full 5.1 surround sound support with precise speaker adjustment",
+        "Improved audio rotation effects with new visual interface",
+        "New vinyl simulation mode with advanced settings",
+        "Improved playlist management with instant global search",
+        "Major bug fixes and performance improvements",
+        "New more intuitive user interface",
+        "Support for new audio and video formats"
+      ]
+    },
+    "5.0.0": {
+      "title": "SolarSound 5.0.0",
+      "description": "Major update with video playback support",
+      "changes": [
+        "Added video playback for MP4, MKV, AVI, MOV, WMV",
+        "Variable playback speed from 0.25x to 10x",
+        "Precise frame-by-frame navigation",
+        "Full support for SRT and ASS subtitles",
+        "Detachable video window for more flexibility",
+        "Improved fullscreen mode",
+        "Integration of mixed playlists (audio + video)"
+      ]
+    },
+    "4.5.0": {
+      "title": "SolarSound 4.5.0",
+      "description": "Improved audio features and interface enhancements",
+      "changes": [
+        "Improved equalizer with 8 bands and custom presets",
+        "Immersive 3D audio rotation effect",
+        "Ultra-fast playlist search",
+        "8 new customizable color themes",
+        "Performance optimizations for large libraries",
+        "New metadata management system",
+        "CD playlist support with automatic recognition"
+      ]
+    }
+  }
+}

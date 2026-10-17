@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" data-i18n-data>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez SolarSound, le lecteur audio et vidéo 5.1" data-i18n="site.description">
+    <meta name="keywords" content="présentation, SolarSound, lecteur audio, 5.1" data-i18n="site.keywords">
+    <title data-i18n="presentation.title">Présentation de SolarSound</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="SolarSound Logo">
+            </div>
+            <span class="app-title" data-i18n="hero.title">SolarSound</span>
+        </a>
+        
+        <nav class="nav-main">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+            <a href="download.html" class="nav-link" data-i18n="nav.download">Téléchargement</a>
+            <a href="presentation.html" class="nav-link active" data-i18n="nav.presentation">Présentation</a>
+            <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+        </nav>
+        
+        <div class="lang-selector">
+            <button>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span class="lang-name">Français</span>
+            </button>
+            <div class="lang-dropdown">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+                <div class="lang-option" data-lang="de">Deutsch</div>
+                <div class="lang-option" data-lang="es">Español</div>
+                <div class="lang-option" data-lang="it">Italiano</div>
+                <div class="lang-option" data-lang="cn">中文</div>
+                <div class="lang-option" data-lang="ru">Русский</div>
+            </div>
+        </div>
+        
+        <button class="menu-toggle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="padding: var(--spacing-2xl) var(--spacing-xl);">
+            <div class="hero-content">
+                <h1 class="section-title" data-i18n="presentation.title">Présentation de SolarSound</h1>
+                <p class="section-subtitle" data-i18n="presentation.subtitle">
+                    Découvrez pourquoi SolarSound est un des meilleurs lecteurs de musique sur PC
+                </p>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section">
+            <div class="card fade-on-scroll">
+                <h2 class="card-title" data-i18n="presentation.introTitle">Introduction</h2>
+                <p class="card-subtitle" data-i18n="presentation.intro">
+                    SolarSound a été créé pour répondre à un besoin personnel : écouter de la musique en surround 5.1 avec des options de réglage précises. N'ayant pas trouvé de solution satisfaisante dans les logiciels existants comme VLC, j'ai décidé de créer mon propre lecteur. Aujourd'hui ce projet a pris une dimension bien plus grande en se proposant également lecteur de musique innovant si vous écoutez des musiques depuis des disques ou mp3 (ou WAV évidemment pour les puristes)
+                </p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="section">
+            <div class="features-grid">
+                <div class="card fade-on-scroll" data-delay="0.1s">
+                    <h3 class="card-title" data-i18n="presentation.story.title">Mon Histoire</h3>
+                    <p data-i18n="presentation.story.content">
+                        Je suis passionné de musique, d'ingénierie et utilise beaucoup l'informatique. Ce projet a commencé comme une simple expérience personnel. Aujourd'hui, il est devenu un lecteur multimédia complet avec des fonctionnalités avancées pour la lecture audio et vidéo. Tout est développé en Python, avec l'aide de l'IA, mais toujours avec attention au détail et à la qualité.
+                    </p>
+                </div>
+                
+                <div class="card fade-on-scroll" data-delay="0.2s">
+                    <h3 class="card-title" data-i18n="presentation.technology.title">Technologies Utilisées</h3>
+                    <p data-i18n="presentation.technology.content">
+                        SolarSound utilise PyQt6 pour son interface graphique, avec des bibliothèques audio spécialisées comme sounddevice, soundfile, et mutagen pour la gestion des fichiers multimédias. L'interface est entièrement personnalisable avec des thèmes de couleurs et des polices adaptables.
+                    </p>
+                </div>
+                
+                <div class="card fade-on-scroll" data-delay="0.3s">
+                    <h3 class="card-title" data-i18n="presentation.future.title">Futur du Projet</h3>
+                    <p data-i18n="presentation.future.content">
+                        Je travaille constamment sur de nouvelles fonctionnalités : support de plus de formats, amélioration des effets audio, interface plus intuitive, et support multiplateforme. Vos retours sont les bienvenus pour orienter le développement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Overview -->
+        <section class="section">
+            <h2 class="section-title" data-i18n="presentation.featuresOverview">Aperçu des Fonctionnalités</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-on-scroll" data-delay="0.1s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/parametres.svg" alt="Paramètres Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="presentation.featureCards.customizable.title">Interface Personnalisable</h3>
+                    <p class="feature-description" data-i18n="presentation.featureCards.customizable.description">Changer les couleurs, les polices, et disposez l'interface selon vos préférences.</p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.2s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/langue.svg" alt="Langue Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="presentation.featureCards.multilingual.title">Multilingue</h3>
+                    <p class="feature-description" data-i18n="presentation.featureCards.multilingual.description">Interface disponible en français, anglais, allemand, espagnol, italien, chinois, russe et plus.</p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.3s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/demarrage.svg" alt="Performance Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="presentation.featureCards.performance.title">Performances Optimisées</h3>
+                    <p class="feature-description" data-i18n="presentation.featureCards.performance.description">Lecture fluide même avec de grandes playlists et des fichiers haute résolution.</p>
+                </div>
+
+                <div class="feature-card fade-on-scroll" data-delay="0.4s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/egaliseur.svg" alt="Equalizer Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.equalizer.title">Égaliseur Personnalisable</h3>
+                    <p class="feature-description" data-i18n="features.equalizer.description">
+                        8 bandes d'égalisation, presets personnalisés, et mode libre pour créer votre propre courbe sonore.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.5s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/playlist.svg" alt="Playlist Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.playlist.title">Gestion de Playlists</h3>
+                    <p class="feature-description" data-i18n="features.playlist.description">
+                        Créez, organisez et gérez vos playlists avec recherche globale et indexation automatique.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.6s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/rotation.svg" alt="Rotation Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.rotation.title">Effets de Rotation</h3>
+                    <p class="feature-description" data-i18n="features.rotation.description">
+                        Faites tourner le son autour de vous avec des effets uniques pour une expérience immersive.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-on-scroll" data-delay="0.7s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/chill.svg" alt="Moods Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.moods.title">Humeurs</h3>
+                    <p class="feature-description" data-i18n="features.moods.description">
+                        Choisissez des humeurs associées à vos playlists et lancez plus rapidement les musiques qui correspondent au moment
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.8s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/heart.svg" alt="Favorites Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.favorites.title">Favoris</h3>
+                    <p class="feature-description" data-i18n="features.favorites.description">
+                        Marquez vos morceaux favoris et lancez-les plus rapidement depuis l'onglet principal
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-on-scroll" data-delay="0.9s">
+                    <div class="feature-icon">
+                        <img src="assets/images/icons/video.svg" alt="Settings Icon">
+                    </div>
+                    <h3 class="feature-title" data-i18n="presentation.featureCards.videoPlayer.title">Lecteur vidéo</h3>
+                    <p class="feature-description" data-i18n="presentation.featureCards.videoPlayer.description">
+                        Regardez des vidéos ou même des films sur ce lecteur intégré, il prend en charge les médias avec son surround évidemment
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="section">
+            <h2 class="section-title" data-i18n="presentation.screenshots">Captures d'Écran</h2>
+            <div class="features-grid">
+                <div class="card fade-on-scroll">
+                    <img src="https://github.com/user-attachments/assets/577b6e43-399f-44c7-9453-27f54e5f63e8" 
+                         alt="Banner" 
+                         class="screenshot-image" 
+                         style="width: 100%; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 data-i18n="presentation.screenshotTitles.banner">Bannière de l'Application</h3>
+                </div>
+                <div class="card fade-on-scroll" data-delay="0.1s">
+                    <img src="https://github.com/user-attachments/assets/14aa71e9-b30e-49b9-90d7-e7aaaf894bcd" 
+                         alt="Logo de démarrage" 
+                         class="screenshot-image" 
+                         style="width: 100%; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 data-i18n="presentation.screenshotTitles.startup">Écran de Démarrage</h3>
+                </div>
+                <div class="card fade-on-scroll" data-delay="0.2s">
+                    <img src="https://github.com/user-attachments/assets/f0177bb7-c1c9-417d-81d4-cad3c5ea4b04" 
+                         alt="Paramètres de couleurs" 
+                         class="screenshot-image" 
+                         style="width: 100%; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h3 data-i18n="presentation.screenshotTitles.colors">Personnalisation des Couleurs</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text" data-i18n="footer.description">
+                SolarSound est un projet open source dédié à fournir la meilleure expérience de lecture audio et vidéo.
+            </p>
+            <div class="footer-links">
+                <span data-i18n="footer.links">Liens rapides:</span>
+                <a href="https://github.com/BalzaTer/SolarSound" class="footer-link" target="_blank">GitHub</a>
+                <a href="https://github.com/BalzaTer/SolarSound?tab=MIT-1-ov-file" class="footer-link" target="_blank" data-i18n="footer.license">Licence</a>
+            </div>
+            <p class="footer-text" data-i18n="footer.copyright">
+                © 2026 SolarSound. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/releases.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

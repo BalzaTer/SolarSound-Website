@@ -1,0 +1,175 @@
+{
+  "site": {
+    "title": "SolarSound - Lecteur Audio & Vidéo 5.1",
+    "description": "SolarSound est un lecteur audio et vidéo avancé avec support complet du son surround 5.1 et de nombreuses fonctionnalités pour les amateurs de musique.",
+    "keywords": "lecteur audio, lecteur vidéo, surround 5.1, musique, égaliseur, playlist"
+  },
+  "nav": {
+    "home": "Accueil",
+    "download": "Téléchargement",
+    "presentation": "Présentation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "SolarSound",
+    "subtitle": "Lecteur Audio & Vidéo 5.1 Ultime",
+    "description": "Écoutez votre musique et regardez vos vidéos avec une qualité exceptionnelle et un contrôle total sur votre expérience audio.",
+    "ctaDownload": "Télécharger Maintenant",
+    "ctaLearn": "En Savoir Plus"
+  },
+  "features": {
+    "title": "Fonctionnalités Principales",
+    "subtitle": "Tout ce dont vous avez besoin pour une expérience audio parfaite",
+    "audio": {
+      "title": "Lecture Audio Avancée",
+      "description": "Support de nombreux formats audio (WAV, MP3, etc.) avec visualisation spectrale et gestion avancée de la lecture."
+    },
+    "video": {
+      "title": "Lecture Vidéo",
+      "description": "Lecture de vidéos en MP4, MKV, AVI, MOV, WMV et plus, avec vitesse variable et sous-titres."
+    },
+    "surround": {
+      "title": "Son Surround 5.1",
+      "description": "Réglage précis de chaque enceinte, mixage mono vers caisson de basse, et effets audio immersifs."
+    },
+    "equalizer": {
+      "title": "Égaliseur Personnalisable",
+      "description": "8 bandes d'égalisation, presets personnalisés, et mode libre pour créer votre propre courbe sonore."
+    },
+    "playlist": {
+      "title": "Gestion de Playlists",
+      "description": "Créez, organisez et gérez vos playlists avec recherche globale et indexation automatique."
+    },
+    "rotation": {
+      "title": "Effets de Rotation",
+      "description": "Faites tourner le son autour de vous avec des effets uniques pour une expérience immersive."
+    },
+    "moods": {
+      "title": "Humeurs",
+      "description": "Choisissez des humeurs associées à vos playlists et lancez plus rapidement les musiques qui correspondent au moment"
+    },
+    "favorites": {
+      "title": "Favoris",
+      "description": "Marquez vos morceaux favoris et lancez-les plus rapidement depuis l'onglet principal"
+    },
+    "settings": {
+      "title": "Des tonnes de paramètres",
+      "description": "De la police d'écriture aux thèmes de couleurs en passant par le lancement au démarrage de l'ordinateur avec vos musiques. Vous maîtrisez tout !"
+    }
+  },
+  "download": {
+    "title": "Télécharger SolarSound",
+    "subtitle": "Disponible pour Windows - Version portable ou installateur",
+    "latest": "Dernière Version",
+    "oldReleases": "Versions Précédentes",
+    "seeChanges": "Voir les changements",
+    "standalone": "Version Portable (EXE)",
+    "installer": "Installateur",
+    "note": "L'installateur propose l'association des fichiers audio/vidéo avec SolarSound."
+  },
+  "presentation": {
+    "title": "Présentation de SolarSound",
+    "subtitle": "Découvrez pourquoi SolarSound est un des meilleurs lecteurs de musique sur PC",
+    "intro": "SolarSound a été créé pour répondre à un besoin personnel : écouter de la musique en surround 5.1 avec des options de réglage précises. N'ayant pas trouvé de solution satisfaisante dans les logiciels existants comme VLC, j'ai décidé de créer mon propre lecteur. Aujourd'hui ce projet a pris une dimension bien plus grande en se proposant également lecteur de musique innovant si vous écoutez des musiques depuis des disques ou mp3 (ou WAV évidemment pour les puristes)",
+    "story": {
+      "title": "Mon Histoire",
+      "content": "Je suis passionné de musique, d'ingénierie et utilise beaucoup l'informatique. Ce projet a commencé comme une simple expérience personnel. Aujourd'hui, il est devenu un lecteur multimédia complet avec des fonctionnalités avancées pour la lecture audio et vidéo. Tout est développé en Python, avec l'aide de l'IA, mais toujours avec attention au détail et à la qualité."
+    },
+    "technology": {
+      "title": "Technologies Utilisées",
+      "content": "SolarSound utilise PyQt6 pour son interface graphique, avec des bibliothèques audio spécialisées comme sounddevice, soundfile, et mutagen pour la gestion des fichiers multimédias. L'interface est entièrement personnalisable avec des thèmes de couleurs et des polices adaptables."
+    },
+    "future": {
+      "title": "Futur du Projet",
+      "content": "Je travaille constamment sur de nouvelles fonctionnalités : support de plus de formats, amélioration des effets audio, interface plus intuitive, et support multiplateforme. Vos retours sont les bienvenus pour orienter le développement."
+    },
+    "featuresOverview": "Aperçu des Fonctionnalités",
+    "screenshots": "Captures d'Écran",
+    "screenshotTitles": {
+      "banner": "Bannière de l'Application",
+      "startup": "Écran de Démarrage",
+      "colors": "Personnalisation des Couleurs"
+    },
+    "featureCards": {
+      "customizable": {
+        "title": "Interface Personnalisable",
+        "description": "Changer les couleurs, les polices, et disposez l'interface selon vos préférences."
+      },
+      "multilingual": {
+        "title": "Multilingue",
+        "description": "Interface disponible en français, anglais, allemand, espagnol, italien, chinois, russe et plus."
+      },
+      "performance": {
+        "title": "Performances Optimisées",
+        "description": "Lecture fluide même avec de grandes playlists et des fichiers haute résolution."
+      },
+      "videoPlayer": {
+        "title": "Lecteur vidéo",
+        "description": "Regardez des vidéos ou même des films sur ce lecteur intégré, il prend en charge les médias avec son surround évidemment"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Des questions, des suggestions ou besoin d'aide ?",
+    "formTitle": "Envoyez-nous un message",
+    "name": "Nom",
+    "email": "Adresse Email",
+    "subject": "Sujet",
+    "message": "Votre Message",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé ! Veuillez vérifier votre client de messagerie.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "note": "Nous vous répondrons dans les plus brefs délais."
+  },
+  "footer": {
+    "description": "SolarSound est un projet open source dédié à fournir la meilleure expérience de lecture audio et vidéo.",
+    "links": "Liens rapides",
+    "github": "GitHub",
+    "license": "Licence",
+    "privacy": "Politique de Confidentialité",
+    "copyright": "© 2026 SolarSound. Tous droits réservés."
+  },
+  "changelog": {
+    "5.1.0": {
+      "title": "SolarSound 5.1.0",
+      "description": "Dernière version avec support amélioré du son surround 5.1 et nouvelles fonctionnalités",
+      "changes": [
+        "Support complet du son surround 5.1 avec réglage précis de chaque enceinte",
+        "Amélioration des effets de rotation audio avec nouvelle interface visuelle",
+        "Nouveau mode de simulation vinyle avec réglages avancés",
+        "Gestion améliorée des playlists avec recherche globale instantanée",
+        "Corrections de bugs majeurs et améliorations des performances",
+        "Nouvelle interface utilisateur plus intuitive",
+        "Support de nouveaux formats audio et vidéo"
+      ]
+    },
+    "5.0.0": {
+      "title": "SolarSound 5.0.0",
+      "description": "Mise à jour majeure avec support de la lecture vidéo",
+      "changes": [
+        "Ajout de la lecture vidéo pour MP4, MKV, AVI, MOV, WMV",
+        "Vitesse de lecture variable de 0.25x à 10x",
+        "Navigation image par image précise",
+        "Support complet des sous-titres SRT et ASS",
+        "Fenêtre vidéo détachable pour plus de flexibilité",
+        "Mode plein écran amélioré",
+        "Intégration des playlists mixtes (audio + vidéo)"
+      ]
+    },
+    "4.5.0": {
+      "title": "SolarSound 4.5.0",
+      "description": "Fonctionnalités audio améliorées et améliorations de l'interface",
+      "changes": [
+        "Égaliseur amélioré avec 8 bandes et presets personnalisés",
+        "Effet de rotation audio 3D immersif",
+        "Recherche dans les playlists ultra-rapide",
+        "8 nouveaux thèmes de couleurs personnalisables",
+        "Optimisations des performances pour les grandes bibliothèques",
+        "Nouveau système de gestion des métadonnées",
+        "Support des playlists CD avec reconnaissance automatique"
+      ]
+    }
+  }
+}
