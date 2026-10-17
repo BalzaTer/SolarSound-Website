@@ -14,29 +14,16 @@ webpage/
 │   ├── css/
 │   │   └── style.css   # Styles CSS avec le thème orange/jaune
 │   ├── js/
-│   │   └── main.js     # JavaScript principal (gestion des langues, formulaire, etc.)
+│   │   └── main.js     # JavaScript principal (formulaire, animations, etc.)
 │   ├── images/
 │   │   ├── logo.png    # Logo de l'application
 │   │   └── solarsound.ico # Icône de l'application
-│   └── locales/
-│       ├── fr.json     # Traductions Français
-│       ├── en.json     # Traductions English
-│       ├── de.json     # Traductions Deutsch
-│       ├── es.json     # Traductions Español
-│       ├── it.json     # Traductions Italiano
-│       ├── cn.json     # Traductions 中文
-│       └── ru.json     # Traductions Русский
 └── README.md           # Ce fichier
 ```
 
 ## Fonctionnalités
 
-### Multilingue
-Le site supporte 7 langues : Français, English, Deutsch, Español, Italiano, 中文, Русский.
-
-- La langue par défaut est le Français
-- La langue sélectionnée est sauvegardée dans le localStorage
-- Tous les textes sont traduits via des fichiers JSON dans `assets/locales/`
+Le site est disponible uniquement en français.
 
 ### Pages
 
@@ -71,22 +58,16 @@ Le site utilise le même thème que l'application :
 
 ## Personnalisation
 
-### Ajouter une nouvelle langue
-
-1. Créez un fichier `assets/locales/xx.json` (où xx est le code de la langue)
-2. Traduisiez tous les textes en utilisant les mêmes clés que dans les autres fichiers
-3. Ajoutez l'option dans le sélecteur de langue dans le header de chaque page HTML
-
 ### Mettre à jour les releases
 
-Modifiez le fichier `assets/js/main.js` dans la classe `DownloadManager` :
+Modifiez la liste `SOLARSOUND_RELEASES` dans `assets/js/releases.js` :
 
 ```javascript
-this.releases = [
+const SOLARSOUND_RELEASES = [
     {
-        version: 'X.Y.Z',
+        version: '1.6',
         date: 'YYYY-MM-DD',
-        title: 'SolarSound X.Y.Z',
+        title: 'SolarSound 1.6',
         description: 'Description de la version',
         standalone: {
             url: 'chemin/vers/SolarSound.exe',
@@ -102,7 +83,7 @@ this.releases = [
             // ...
         ]
     },
-    // ... autres versions
+    // Versions précédentes
 ];
 ```
 
@@ -116,15 +97,9 @@ Les captures d'écran sont chargées depuis les URLs GitHub. Vous pouvez :
 
 ### Pour tester localement
 
-Ouvrez simplement les fichiers HTML dans votre navigateur :
-```bash
-# Sous Windows
-start webpage/index.html
+Sous Windows, ouvrez PowerShell dans ce dossier et lancez `.\demarrer-serveur.ps1`. Le navigateur ouvrira le site à l'adresse `http://127.0.0.1:8000/`. Gardez la fenêtre du serveur ouverte pendant la visite, puis appuyez sur `Ctrl+C` pour l'arrêter. Pour choisir un autre port, utilisez par exemple `.\demarrer-serveur.ps1 -Port 8080`.
 
-# Sous Linux/Mac
-xdg-open webpage/index.html  # Linux
-open webpage/index.html      # Mac
-```
+Python doit être installé et disponible via `py` ou `python`.
 
 ### Pour héberger le site
 
@@ -141,8 +116,6 @@ Copiez le dossier `webpage` sur votre serveur web. Aucune configuration serveur 
 - **HTML5** : Structure des pages
 - **CSS3** : Styles et animations
 - **Vanilla JavaScript** : Interactivité sans dépendances
-- **JSON** : Fichiers de traduction
-
 Aucune bibliothèque externe n'est utilisée, ce qui rend le site léger et rapide.
 
 ## Notes
@@ -154,7 +127,6 @@ Aucune bibliothèque externe n'est utilisée, ce qui rend le site léger et rapi
 ## Contribuer
 
 Les contributions au site web sont les bienvenues ! Vous pouvez :
-- Améliorer les traductions
 - Corriger des bugs dans le code HTML/CSS/JS
 - Ajouter de nouvelles fonctionnalités
 - Améliorer le design

@@ -195,65 +195,6 @@ body::before {
     background: rgba(255, 149, 0, 0.15);
 }
 
-/* Language Selector */
-.lang-selector {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.lang-selector button {
-    background: transparent;
-    border: 1px solid var(--text-muted);
-    color: var(--text-secondary);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all var(--transition-normal);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.lang-selector button:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    background: rgba(255, 149, 0, 0.1);
-}
-
-.lang-selector .lang-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 149, 0, 0.2);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-sm);
-    min-width: 120px;
-    display: none;
-    z-index: 1001;
-    box-shadow: var(--shadow-lg);
-}
-
-.lang-selector:hover .lang-dropdown {
-    display: block;
-}
-
-.lang-selector .lang-option {
-    padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--text-secondary);
-    cursor: pointer;
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
-}
-
-.lang-selector .lang-option:hover {
-    background: rgba(255, 149, 0, 0.15);
-    color: var(--primary-color);
-}
-
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -797,55 +738,6 @@ body::before {
 }
 
 /* ============================================
-   RTL Support for Arabic, Chinese, Russian
-   ============================================ */
-[dir="rtl"] {
-    /* Reverse text alignment */
-    text-align: right;
-}
-
-[dir="rtl"] .hero {
-    text-align: center;
-}
-
-[dir="rtl"] .hero-actions {
-    justify-content: center;
-}
-
-[dir="rtl"] .nav-main {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .download-item-header {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .download-buttons {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .changelog-toggle {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-[dir="rtl"] .card {
-    text-align: right;
-}
-
-[dir="rtl"] .feature-card {
-    text-align: center;
-}
-
-[dir="rtl"] .section-title {
-    text-align: center;
-}
-
-[dir="rtl"] .section-subtitle {
-    text-align: center;
-}
-
-/* ============================================
    Animations
    ============================================ */
 @keyframes fadeIn {
@@ -987,9 +879,6 @@ body::before {
         padding: 0 var(--spacing-md);
     }
     
-    [dir="rtl"] .nav-main {
-        flex-direction: row;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1004,11 +893,6 @@ body::before {
     
     .hero h1 {
         font-size: 1.5rem;
-    }
-    
-    .lang-selector button {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        font-size: 0.8rem;
     }
     
     .download-item-header {
@@ -1075,6 +959,11 @@ body::before {
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-normal);
+    padding: var(--spacing-xl) 80px;
+}
+
+.lightbox-open {
+    overflow: hidden;
 }
 
 .lightbox.active {
@@ -1084,21 +973,83 @@ body::before {
 
 .lightbox-content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 90%;
     max-height: 90%;
 }
 
 .lightbox-image {
-    max-width: 100%;
+    max-width: min(100%, 1400px);
     max-height: 80vh;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    object-fit: contain;
+    transform-origin: center;
+    transition: transform 0.15s ease;
+}
+
+.lightbox-image.zoomed {
+    cursor: grab;
+    transition: none;
+}
+
+.lightbox-image.zoomed:active {
+    cursor: grabbing;
+}
+
+.lightbox-zoom-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.lightbox-zoom-button,
+.lightbox-zoom-reset {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    cursor: pointer;
+    min-width: 40px;
+    min-height: 40px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font: inherit;
+}
+
+.lightbox-zoom-button {
+    font-size: 1.4rem;
+}
+
+.lightbox-zoom-button:hover:not(:disabled),
+.lightbox-zoom-reset:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-zoom-button:disabled,
+.lightbox-zoom-reset:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.lightbox-zoom-level {
+    min-width: 56px;
+    text-align: center;
+}
+
+.lightbox-caption {
+    color: var(--text-primary);
+    margin-top: var(--spacing-md);
+    text-align: center;
 }
 
 .lightbox-close {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -48px;
+    right: -48px;
     background: transparent;
     border: none;
     color: white;
@@ -1125,6 +1076,7 @@ body::before {
     padding: var(--spacing-md);
     border-radius: var(--radius-full);
     transition: all var(--transition-normal);
+    z-index: 1;
 }
 
 .lightbox-nav:hover {
@@ -1143,4 +1095,44 @@ body::before {
     width: 30px;
     height: 30px;
     fill: currentColor;
+}
+
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible,
+.lightbox-zoom-button:focus-visible,
+.lightbox-zoom-reset:focus-visible,
+.screenshot-image:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        padding: var(--spacing-lg) 48px;
+    }
+
+    .lightbox-content {
+        max-width: 100%;
+    }
+
+    .lightbox-image {
+        max-height: 75vh;
+    }
+
+    .lightbox-close {
+        top: -44px;
+        right: -40px;
+    }
+
+    .lightbox-nav {
+        padding: var(--spacing-sm);
+    }
+
+    .lightbox-nav.prev {
+        left: -48px;
+    }
+
+    .lightbox-nav.next {
+        right: -48px;
+    }
 }

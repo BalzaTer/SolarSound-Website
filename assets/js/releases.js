@@ -40,7 +40,6 @@ const SOLARSOUND_RELEASES = [
             size: '68 MB'
         },
         changes: [
-            'Prise en charge de 11 langues désormais',
             'Gestion interne des playlists',
             'Système d\'humeurs pour coller au moment',
             'Bibliothèque pour effectuer des recherches de fichiers',
