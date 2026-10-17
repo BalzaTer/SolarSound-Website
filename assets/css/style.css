@@ -686,6 +686,36 @@ body::before {
     color: var(--text-muted);
 }
 
+.form-input[type="file"]::file-selector-button {
+    margin-right: var(--spacing-md);
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #ff9500, #ffcc00);
+    border: none;
+    border-radius: var(--radius-md);
+    color: #1a1a1a;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.form-input[type="file"]::file-selector-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* Le texte "No files selected" */
+.form-input[type="file"] {
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.form-help {
+    display: block;
+    margin-top: var(--spacing-xs);
+    color: var(--text-muted);
+}
+
 .form-textarea {
     min-height: 150px;
     resize: vertical;
@@ -932,6 +962,16 @@ body::before {
     border-radius: 8px;
     text-align: center;
     animation: fadeIn 0.3s ease;
+}
+
+.form-privacy-note {
+    margin-top: var(--spacing-md);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.form-honeypot {
+    display: none;
 }
 
 /* Screenshot Gallery - Zoom and Lightbox */

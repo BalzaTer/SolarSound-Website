@@ -7,7 +7,8 @@
 // Configuration
 // ============================================
 const CONFIG = {
-    contactEmail: 'dev.hcstudio@gmail.com',
+    contactFormEndpoint: 'https://formsubmit.co/ajax/dev.hcstudio@gmail.com',
+    maxContactAttachmentBytes: 10 * 1024 * 1024,
     animationsEnabled: true,
     githubRepo: 'https://github.com/BalzaTer/SolarSound',
     githubLicense: 'https://github.com/BalzaTer/SolarSound?tab=MIT-1-ov-file'
@@ -21,14 +22,35 @@ class ContactForm {
         this.form = document.querySelector('.contact-form');
         if (this.form) {
             this.bindEvents();
+            this.showSubmissionStatus();
         }
     }
     
     bindEvents() {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        this.form.querySelector('[name="attachment[]"]').addEventListener('change', (e) => {
+            this.updateAttachmentList(e.currentTarget.files);
+        });
     }
     
-    handleSubmit(e) {
+    async handleSubmit(e) {
+        const attachmentInput = this.form.querySelector('[name="attachment[]"]');
+        const attachments = Array.from(attachmentInput.files);
+        const totalSize = attachments.reduce((size, file) => size + file.size, 0);
+
+        if (totalSize > CONFIG.maxContactAttachmentBytes) {
+            e.preventDefault();
+            this.showMessage('La taille totale des pièces jointes dépasse 10 Mo. Retirez des fichiers puis réessayez.', 'error');
+            return;
+        }
+
+        if (attachments.length > 0) {
+            const returnUrl = new URL(window.location.href);
+            returnUrl.searchParams.set('contact', 'sent');
+            this.form.querySelector('[name="_next"]').value = returnUrl.toString();
+            return;
+        }
+
         e.preventDefault();
         
         const submitBtn = this.form.querySelector('button[type="submit"]');
@@ -38,40 +60,62 @@ class ContactForm {
         submitBtn.innerHTML = `<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span>Envoi en cours...</span>`;
         submitBtn.disabled = true;
         
-        // Collect form data
-        const formData = new FormData(this.form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message')
-        };
-        
-        // Send email using mailto
-        const subject = encodeURIComponent(`[SolarSound] ${data.subject || 'Formulaire de contact'}`);
-        const body = encodeURIComponent(
-            `Nom : ${data.name}\n` +
-            `Adresse e-mail : ${data.email}\n` +
-            `Message :\n${data.message}`
-        );
-        
-        const mailtoLink = `mailto:${CONFIG.contactEmail}?subject=${subject}&body=${body}`;
-        
-        // Open mail client
-        window.location.href = mailtoLink;
-        
-        // Reset form and button
-        setTimeout(() => {
+        try {
+            const formData = new FormData(this.form);
+            formData.delete('attachment[]');
+            const submission = Object.fromEntries(formData.entries());
+
+            const response = await fetch(CONFIG.contactFormEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(submission)
+            });
+            const result = await response.json().catch(() => null);
+
+            if (!response.ok || (result?.success !== true && result?.success !== 'true')) {
+                const serviceMessage = typeof result?.message === 'string' ? result.message : null;
+                throw new Error(serviceMessage || `Le service a répondu avec le statut ${response.status}.`);
+            }
+
+            this.form.reset();
+            this.showMessage('Message envoyé. Merci de nous avoir contactés !', 'success');
+        } catch (error) {
+            console.error('Échec de l’envoi du formulaire de contact :', error);
+            this.showMessage(
+                error instanceof TypeError
+                    ? 'Impossible de joindre le service d’envoi. Vérifiez votre connexion et réessayez.'
+                    : `L’envoi a échoué : ${error.message}`,
+                'error'
+            );
+        } finally {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-            this.form.reset();
-            
-            // Show success message
-            this.showMessage(
-                'Message envoyé ! Veuillez vérifier votre client de messagerie.',
-                'success'
-            );
-        }, 1000);
+        }
+    }
+
+    updateAttachmentList(files) {
+        const list = this.form.querySelector('#attachment-list');
+        if (files.length === 0) {
+            list.textContent = 'Aucun fichier sélectionné.';
+            return;
+        }
+
+        const totalSize = Array.from(files).reduce((size, file) => size + file.size, 0);
+        const totalSizeMb = Math.ceil((totalSize / (1024 * 1024)) * 100) / 100;
+        const fileNames = Array.from(files, (file) => file.name).join(', ');
+        list.textContent = `${fileNames} (${totalSizeMb.toFixed(2)} Mo au total)`;
+    }
+
+    showSubmissionStatus() {
+        const url = new URL(window.location.href);
+        if (url.searchParams.get('contact') !== 'sent') return;
+
+        this.showMessage('Message envoyé. Merci de nous avoir contactés !', 'success');
+        url.searchParams.delete('contact');
+        window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
     }
     
     showMessage(text, type) {

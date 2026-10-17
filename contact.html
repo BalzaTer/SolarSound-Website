@@ -53,7 +53,10 @@
                 <div class="card fade-on-scroll">
                     <h2 class="card-title">Envoyez-moi un message</h2>
                     
-                    <form class="contact-form">
+                    <form class="contact-form"
+                          action="https://formsubmit.co/dev.hcstudio@gmail.com"
+                          method="POST"
+                          enctype="multipart/form-data">
                         <div class="form-group">
                             <label class="form-label">Nom</label>
                             <input type="text" 
@@ -88,6 +91,26 @@
                                       required
                                       placeholder="Votre Message"></textarea>
                         </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-attachments">Pièces jointes (facultatif)</label>
+                            <input id="contact-attachments"
+                                   type="file"
+                                   name="attachment[]"
+                                   class="form-input"
+                                   multiple
+                                   aria-describedby="attachment-help attachment-list">
+                            <small id="attachment-help" class="form-help">
+                                PNG, JPEG, PDF, LOG et autres fichiers — 10 Mo maximum au total.
+                            </small>
+                            <small id="attachment-list" class="form-help" aria-live="polite">
+                                Aucun fichier sélectionné.
+                            </small>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Nouveau message depuis SolarSound">
+                        <input type="hidden" name="_next" value="">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honeypot">
                         
                         <button type="submit" class="btn btn-primary form-submit">
                             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -96,24 +119,18 @@
                             <span>Envoyer le Message</span>
                         </button>
                     </form>
+                    <p class="form-privacy-note">
+                        Ce formulaire et ses pièces jointes sont transmis par FormSubmit pour acheminer votre demande.
+                    </p>
                 </div>
                 
                 <!-- Alternative Contact Methods -->
                 <div class="card fade-on-scroll" data-delay="0.1s">
                     <h2 class="card-title">Autres Moyens de Contact</h2>
                     <p style="color: var(--text-secondary);">
-                        Vous pouvez également me contacter directement par email :
+                        Vous pouvez également me contacter directement par e-mail à
+                        <strong>dev.hcstudio@gmail.com</strong>.
                     </p>
-                    <div style="margin-top: var(--spacing-md);">
-                        <a href="mailto:dev.hcstudio@gmail.com" 
-                           class="btn btn-secondary" 
-                           style="display: inline-flex; align-items: center; gap: var(--spacing-sm);">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            dev.hcstudio@gmail.com
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>

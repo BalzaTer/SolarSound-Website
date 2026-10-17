@@ -120,7 +120,7 @@ Aucune bibliothèque externe n'est utilisée, ce qui rend le site léger et rapi
 
 ## Notes
 
-- Le formulaire de contact utilise `mailto:` pour envoyer les messages. Pour une solution plus avancée, vous pourriez implémenter un backend avec PHP, Node.js, ou un service comme Formspree.
+- Le formulaire de contact envoie les messages via FormSubmit, un service tiers compatible avec GitHub Pages. À la première soumission, FormSubmit envoie un e-mail de confirmation à `dev.hcstudio@gmail.com` : confirmez cette adresse pour activer l’envoi. Les données et les pièces jointes lui sont transmises. La taille cumulée des pièces jointes est limitée à 10 Mo par FormSubmit.
 - Les téléchargements pointent vers des chemins locaux. Pour un site hébergé, utilisez des URLs absolues ou configurez correctement les chemins relatifs.
 - Les captures d'écran sont actuellement chargées depuis GitHub. Pour un site de production, hébergez les images localement.
 
