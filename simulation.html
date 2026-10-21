@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulation de l'interface SolarSound">
+    <meta name="keywords" content="SolarSound, simulateur, lecteur audio, surround">
+    <title>Simulation SolarSound</title>
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/simulation.css">
+</head>
+<body class="sim-body">
+    <div class="sim-window">
+        <header class="sim-header">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true"></div>
+                <div class="brand-name">SolarSound</div>
+            </div>
+
+            <nav class="sim-tabs" aria-label="Menu principal">
+                <a href="#">Fichier</a>
+                <a href="#">Lecture</a>
+                <a href="#">Affichage</a>
+                <a href="#">À propos</a>
+            </nav>
+
+            <div class="search-box" aria-label="Recherche">
+                <img src="assets/images/icons/loupe.svg" alt="Recherche" class="svg-icon search-icon">
+                <span class="search-text">Rechercher pistes, albums, artistes, ...</span>
+            </div>
+        </header>
+
+        <main class="sim-main">
+            <div class="top-bar">
+                <div class="app-title" aria-label="SolarSound 5.1">
+                    <span class="light">SOLAR</span>
+                    <span class="dark">SOUND</span>
+                    <span class="small">ELECTEUR 5.1</span>
+                </div>
+
+                <div class="random-state">
+                    <span class="dot"></span>
+                    <span>Aléatoire</span>
+                </div>
+            </div>
+
+            <section class="player-shell" aria-label="Lecteur audio">
+                <div class="album-box" aria-hidden="true"></div>
+
+                <div class="track-box">
+                    <div class="track-title">Aucun morceau</div>
+
+                    <div class="progress-wrap" aria-label="Progression">
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                            <div class="progress-thumb"></div>
+                        </div>
+                    </div>
+
+                    <div class="time-row">
+                        <span class="current">0:00</span>
+                        <span class="total">0:00</span>
+                    </div>
+                </div>
+
+                <div class="volume-box" aria-label="Volume">
+                    <div class="volume-stack">
+                        <div class="volume-fill"></div>
+                    </div>
+                    <div class="percent">60%</div>
+                </div>
+            </section>
+
+            <section class="controls-layout" aria-label="Contrôles de lecture">
+                <div class="transport-controls">
+                    <button class="transport-btn" type="button" aria-label="Lecture aléatoire">
+                        <img src="assets/images/icons/aleatoire.svg" alt="Aléatoire" class="svg-icon">
+                    </button>
+                    <button class="transport-btn" type="button" aria-label="Précédent">
+                        <img src="assets/images/icons/next.svg" alt="Précédent" class="svg-icon prev-icon">
+                    </button>
+                    <button class="transport-btn" type="button" aria-label="Stop">
+                        <img src="assets/images/icons/stop.svg" alt="Stop" class="svg-icon">
+                    </button>
+                    <button class="transport-btn primary" type="button" aria-label="Lecture">
+                        <img src="assets/images/icons/play.svg" alt="Lecture" class="svg-icon play-icon">
+                    </button>
+                    <button class="transport-btn" type="button" aria-label="Suivant">
+                        <img src="assets/images/icons/next.svg" alt="Suivant" class="svg-icon next-icon">
+                    </button>
+                    <button class="transport-btn" type="button" aria-label="Répéter">
+                        <img src="assets/images/icons/boucle.svg" alt="Répéter" class="svg-icon">
+                    </button>
+                </div>
+
+                <aside class="next-queue" aria-label="Prochain morceau">
+                    <div class="queue-label">Prochain :</div>
+                    <div class="queue-track">
+                        <div class="queue-thumb" aria-hidden="true">
+                            <img src="assets/images/icons/defaultcover.svg" alt="Pochette" class="svg-icon cover-icon">
+                        </div>
+                        <div class="title">Aucun morceau</div>
+                    </div>
+                </aside>
+            </section>
+
+            <div class="toolbar" aria-label="Outils de bibliothèque">
+                <div class="toolbar-left">
+                    <div class="tab-row">
+                        <button class="media-btn active" type="button"><img src="assets/images/icons/playlist.svg" alt="Playlist" class="svg-icon"> Playlist</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/video.svg" alt="Vidéo" class="svg-icon"> Vidéo</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/mesplaylists.svg" alt="Mes playlists" class="svg-icon"> Mes Playlists</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/surround.svg" alt="5.1" class="svg-icon"> 5.1</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/egaliseur.svg" alt="Égaliseur" class="svg-icon"> Égaliseur</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/rotation.svg" alt="Rotation" class="svg-icon"> Rotation</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/vinyle.svg" alt="Vinyle" class="svg-icon"> Vinyle</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/parametres.svg" alt="Paramètres" class="svg-icon"> Paramètres</button>
+                    </div>
+                </div>
+
+                <div class="toolbar-right">
+                    <div class="category-row">
+                        <button class="action-btn" type="button"><img src="assets/images/icons/ajout.svg" alt="Ajouter" class="svg-icon"> Ajouter</button>
+                        <button class="action-btn" type="button"><img src="assets/images/icons/dossier.svg" alt="Dossier" class="svg-icon"> Dossier</button>
+                        <button class="action-btn" type="button"><img src="assets/images/icons/defaultcover.svg" alt="CD audio" class="svg-icon"> CD audio</button>
+                        <button class="action-btn" type="button"><img src="assets/images/icons/retirer.svg" alt="Retirer" class="svg-icon"> Retirer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar" style="margin-top: 12px;" aria-label="Filtres et collections">
+                <div class="toolbar-left">
+                    <div class="tab-row">
+                        <button class="media-btn" type="button"><img src="assets/images/icons/triste.svg" alt="Triste" class="svg-icon"> Triste</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/motivation.svg" alt="Motivation" class="svg-icon"> Motivation</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/focus.svg" alt="Focus" class="svg-icon"> Focus</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/chill.svg" alt="Chill" class="svg-icon"> Chill</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/soiree.svg" alt="Soirée" class="svg-icon"> Soirée</button>
+                        <button class="media-btn" type="button"><img src="assets/images/icons/flow.svg" alt="Flow" class="svg-icon"> Flow</button>
+                    </div>
+                </div>
+
+                <div class="toolbar-right">
+                    <div class="category-row">
+                        <button class="action-btn" type="button"><img src="assets/images/icons/mesplaylists.svg" alt="Mes playlists" class="svg-icon"> Mes Playlists</button>
+                        <button class="action-btn alt" type="button"><img src="assets/images/icons/heart.svg" alt="Coups de coeur" class="svg-icon"> Coups de coeur</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-bar">Prêt</div>
+        </main>
+    </div>
+
+    <script src="assets/js/simulation.js"></script>
+</body>
+</html>
